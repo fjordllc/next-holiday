@@ -2,4 +2,4 @@ require 'rubygems'
 require 'bundler'
 Bundler.setup
 require 'app'
-run App
+run Sinatra::Application
