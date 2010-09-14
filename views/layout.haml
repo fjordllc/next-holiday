@@ -11,11 +11,12 @@
     %link{:href => 'style.css', :rel => 'stylesheet', :type => 'text/css'}
     %link{:rel => 'shortcut icon', :href => '/favicon.ico'}
   %body
-    #header
-      %h1 <a href="/">Next Holiday</a>
-      %h2 次の祝日は？
-    = yield
+    .wrapp.clear
+      .inner
+        %h2 次の<span>祝日</span>は？
+        = yield
     #footer
+      %h1 <a href="/">Next Holiday</a>
       %p.copyright
         Copyright &copy; <a href="http://fjord.jp">FJORD, LLC</a> Created by <a href="http://twitter.com/machida">@machida</a> and <a href="http://twitter.com/komagata">@komagata</a>
     :javascript
