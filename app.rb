@@ -14,5 +14,5 @@ end
 
 get '/*.css' do |path|
   content_type 'text/css'
-  sass path.to_sym, :sass => {:load_paths => [options.views]}
+  sass path.to_sym, :sass => {:load_paths => [settings.views]}
 end
