@@ -5,8 +5,7 @@ class AppTest < Test::Unit::TestCase
   context "Access pages" do
     should "show index" do
       get '/'
-      puts last_response.body.class
-      assert_match '体育の日', last_response.body
+      assert_match 'Next Holiday', last_response.body
     end
   end
 end

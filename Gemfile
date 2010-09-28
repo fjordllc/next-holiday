@@ -12,4 +12,6 @@ group :test do
   gem 'autotest'
   gem 'autotest-growl'
   gem 'delorean'
+  gem 'cucumber'
+  gem 'webrat'
 end
