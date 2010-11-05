@@ -24,7 +24,7 @@ helpers do
       'spring'
     when 6..8
       'summer'
-    when 9..11
+    when 9..10
       'autumn'
     else
       'winter'
