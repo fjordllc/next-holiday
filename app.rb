@@ -16,3 +16,18 @@ get '/*.css' do |path|
   content_type 'text/css'
   sass path.to_sym, :sass => {:load_paths => [settings.views]}
 end
+
+helpers do
+  def season
+    case Time.now.month
+    when 3..5
+      'spring'
+    when 6..8
+      'summer'
+    when 9..11
+      'autumn'
+    else
+      'winter'
+    end
+  end
+end
