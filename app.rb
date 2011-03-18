@@ -20,7 +20,7 @@ end
 helpers do
   def season
     case Time.now.month
-    when 3..5
+    when 4..5
       'spring'
     when 6..8
       'summer'
