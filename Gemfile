@@ -1,11 +1,9 @@
-source :gemcutter
+source :rubygems
 
 gem 'haml'
 gem 'sinatra'
 gem 'rack-flash'
-gem 'exceptional'
 gem 'holiday_jp', '0.2.1'
-gem 'thin'
 
 group :test do
   gem 'shoulda'
