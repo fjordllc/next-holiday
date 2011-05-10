@@ -10,6 +10,4 @@ gem 'thin'
 group :test do
   gem 'shoulda'
   gem 'rack-test'
-  gem 'autotest'
-  gem 'autotest-growl'
 end

@@ -8,7 +8,7 @@ set :sass, {:style => :expanded}
 
 get '/' do
   today = Date.today
-  @holiday = HolidayJp.between(today, today >> 2).first
+  @holiday = HolidayJp.between(today, today >> 6).first
   haml :index
 end
 
