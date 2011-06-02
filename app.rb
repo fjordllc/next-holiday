@@ -6,6 +6,18 @@ require 'holiday_jp'
 set :haml, {:attr_wrapper => '"', :ugly => false}
 set :sass, {:style => :expanded}
 
+get '/', :user_agent => /Mozilla\/5\.0.*iPhone.*?/ do
+  today = Date.today
+  @holiday = HolidayJp.between(today, today >> 12).first
+  haml :iphone, :layout => false
+end
+
+get '/date/:date', :user_agent => /Mozilla\/5\.0.*iPhone.*?/ do
+  today = Date.strptime(params[:date], "%Y-%m-%d")
+  @holiday = HolidayJp.between(today, today >> 12).first
+  haml :iphone2, :layout => false
+end
+
 get '/' do
   today = Date.today
   @holiday = HolidayJp.between(today, today >> 2).first
