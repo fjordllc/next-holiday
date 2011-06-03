@@ -15,7 +15,7 @@ end
 get '/date/:date', :user_agent => /Mozilla\/5\.0.*iPhone.*?/ do
   today = Date.strptime(params[:date], "%Y-%m-%d")
   @holiday = HolidayJp.between(today, today >> 12).first
-  haml :iphone2, :layout => false
+  haml :iphone, :layout => false
 end
 
 get '/' do
