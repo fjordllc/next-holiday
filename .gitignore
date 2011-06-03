@@ -4,3 +4,6 @@ bundle
 tmp/*.log
 *.csv
 coverage
+*.swp
+.rvmrc
+.sass-cache/*
