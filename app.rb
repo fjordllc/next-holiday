@@ -34,9 +34,9 @@ helpers do
     case Time.now.month
     when 3..5
       'spring'
-    when 6..8
+    when 6..9
       'summer'
-    when 9..10
+    when 10
       'autumn'
     else
       'winter'
