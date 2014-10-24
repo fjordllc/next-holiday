@@ -7,7 +7,7 @@ Display next holiday in Japan.
     $ gem install bundler --version "1.0.0"
     $ git clone git://github.com/komagata/next-holiday.git
     $ cd next-holiday
-    $ bundle install bundle --without test
+    $ bundle
     $ bundle exec rackup
 
 View at: [http://localhost:9292/](http://localhost:9292/)
