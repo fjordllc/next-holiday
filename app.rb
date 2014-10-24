@@ -36,8 +36,8 @@ helpers do
       'spring'
     when 6..9
       'summer'
-    when 10
-      'autumn'
+#    when 10 # FIXME
+#      'autumn'
     else
       'winter'
     end
