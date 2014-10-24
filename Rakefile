@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler'
 Bundler.setup
-require 'cucumber/rake/task'
 
 task :default => :test
 
