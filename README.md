@@ -4,13 +4,12 @@ Display next holiday in Japan.
 
 ## INSTALLATION
 
-    $ gem install bundler --version "1.0.0"
     $ git clone git://github.com/komagata/next-holiday.git
     $ cd next-holiday
     $ bundle
-    $ bundle exec rackup
+    $ bundle exec ruby app.rb
 
-View at: [http://localhost:9292/](http://localhost:9292/)
+View at: [http://localhost:4567/](http://localhost:4567/)
 
 ## Note on Patches/Pull Requests
 
