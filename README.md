@@ -7,9 +7,9 @@ Display next holiday in Japan.
     $ git clone git://github.com/komagata/next-holiday.git
     $ cd next-holiday
     $ bundle
-    $ bundle exec ruby app.rb
+    $ bundle exec rackup
 
-View at: [http://localhost:4567/](http://localhost:4567/)
+View at: [http://localhost:9292/](http://localhost:9292/)
 
 ## Note on Patches/Pull Requests
 
