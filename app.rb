@@ -33,11 +33,15 @@ end
 get "/date/:date" do
   today = Date.strptime(params[:date], "%Y-%m-%d")
   @holiday = HolidayJp.between(today, today >> 12).first
+  @next = HolidayJp.between(@holiday.date + 1, @holiday.date >> 12).first
+  @prev = HolidayJp.between(@holiday.date << 12, @holiday.date - 1).last
   haml :index
 end
 
 get "/" do
   today = Date.today
-  @holiday = HolidayJp.between(today, today >> 6).first
+  @holiday = HolidayJp.between(today, today >> 12).first
+  @next = HolidayJp.between(@holiday.date + 1, @holiday.date >> 12).first
+  @prev = HolidayJp.between(@holiday.date << 12, @holiday.date - 1).last
   haml :index
 end

@@ -24,12 +24,12 @@
             %nav.next-holiday-nav
               %ul.next-holiday-nav__items
                 %li.next-holiday-nav__item.is-prev
-                  %a.next-holiday-nav__item-link{href: ""}
+                  %a.next-holiday-nav__item-link{href: "/date/#{@prev.date}"}
                     %i.fa.fa-angle-left
                 %li.next-holiday-nav__item.is-current
                   = @holiday.name
                 %li.next-holiday-nav__item.is-next
-                  %a.next-holiday-nav__item-link{href: "/#/date/#{@holiday.date.next}"}
+                  %a.next-holiday-nav__item-link{href: "/date/#{@next.date}"}
                     %i.fa.fa-angle-right
 
       %footer.footer
