@@ -1,0 +1,38 @@
+.next-holiday-nav__items
+  display: flex
+  align-items: center
+  +margin(vertical, .5rem)
+  +media-breakpoint-down(sm)
+    +margin(vertical, .25rem)
+
+.next-holiday-nav__item
+  &.is-current
+    +text-block(1rem 1, 400 center)
+    +margin(horizontal, .25rem)
+    width: 5rem
+    +media-breakpoint-down(sm)
+      font-size: .75rem
+      width: 100%
+      +margin(horizontal, 0)
+
+.next-holiday-nav__item-link
+  +text-block(1.25rem 1, #4e4e50 flex 400)
+  align-items: center
+  justify-content: center
+  +hover-link
+  +size(1.5rem)
+  +media-breakpoint-down(sm)
+    .next-holiday-nav__item.is-prev &,
+    .next-holiday-nav__item.is-next &
+      +size(2.75rem 100%)
+      +text-block(2rem, flex white)
+      align-items: center
+      justify-content: center
+      transition: all .2s ease-in
+      &:hover
+        text-decoration: none
+        background-color: rgba(white, .2)
+    .next-holiday-nav__item.is-prev &
+      +position(fixed, left 0, top 0)
+    .next-holiday-nav__item.is-next &
+      +position(fixed, right 0, top 0)
