@@ -2,9 +2,9 @@ require "sinatra"
 require "haml"
 require "sass"
 require "holiday_jp"
-require 'sprockets'
-require 'oulu'
-require 'autoprefixer-rails'
+require "sprockets"
+require "oulu"
+require "autoprefixer-rails"
 
 configure do
   Oulu.load_paths.each do |path|
@@ -20,12 +20,12 @@ end
 
 AutoprefixerRails.install(assets)
 
-get '/assets/stylesheets/*' do
+get "/assets/stylesheets/*" do
   env["PATH_INFO"].sub!("/assets/stylesheets", "")
   assets.call(env)
 end
 
-get '/assets/javascripts/*' do
+get "/assets/javascripts/*" do
   env["PATH_INFO"].sub!("/assets/javascripts", "")
   assets.call(env)
 end
