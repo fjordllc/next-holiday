@@ -3,7 +3,6 @@ ruby "2.4.1"
 
 gem "haml"
 gem "sass"
-gem "sassc"
 gem "sinatra"
 gem "rack-flash"
 gem "holiday_jp"

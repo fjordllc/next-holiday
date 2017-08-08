@@ -2,25 +2,36 @@
 !!!
 %html
   %head
+    %title Next Holiday
     %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8'}
     %meta{'http-equiv' => 'Content-Style-Type', 'content' => 'text/css'}
     %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
     %meta{ name: 'description', content: '次の祝日を教えてくれるサービス' }
     %meta{ name: 'keywords', content: '祝日,お休み,休日,お出かけ' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    %title Next Holiday
     %link{ href: '/assets/stylesheets/application.css', rel: 'stylesheet', type: 'text/css' }
     %link{ href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', rel: 'stylesheet', type: 'text/css' }
+    %link{ href: 'https://fonts.googleapis.com/css?family=EB+Garamond', rel: 'stylesheet', type: 'text/css' }
     %link{ rel: 'shortcut icon', href: '/favicon.ico'}
+    %link{ rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png"}
+    %link{ rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png"}
+    %link{ rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/favicon-16x16.png"}
+    %link{ rel: "manifest", href: "/favicons/manifest.json"}
+    %link{ rel: "mask-icon", href: "/favicons/safari-pinned-tab.svg", color: "#5bbad5"}
+    %meta{ name: "theme-color", content: "#ffffff"}
   %body{class: "is-#{@holiday.date.month}", style: "background-image: url(/images/bg_#{@holiday.date.month}_2.jpg)" }
     .wrapper{ style: "background-image: url(/images/bg_#{@holiday.date.month}_1.jpg)" }
       %main.main
         .next-holiday
           .next-holiday__inner
             %h1.next-holiday__title
-              次の祝日は？
+              - if request.path == "/"
+                次の祝日は？
+              - else
+                %a.next-holiday__title-link{href: "/"}
+                  Next Holiday
             %time.next-holiday__date
-              #{@holiday.date.month}月#{@holiday.date.day}日
+              #{@holiday.date.month}月#{@holiday.date.day}日(#{@holiday.wday_name})
             %nav.next-holiday-nav
               %ul.next-holiday-nav__items
                 %li.next-holiday-nav__item.is-prev
@@ -33,13 +44,17 @@
                     %i.fa.fa-angle-right
 
       %footer.footer
-        %h2.footer__title <a href="/">Next Holiday</a>
+        %h2.footer__title
+          %a{href: "/"}
+            Next Holiday
         .footer__powerd-by
           Powerd by
-          <a href="https://github.com/holiday-jp/holiday_jp" target="_blank">holiday_jp</a>
+          %a{href: "https://github.com/holiday-jp/holiday_jp", target:"_blank"}
+            holiday_jp
         .footer__photos
           Photos by
-          <a href="https://www.pakutaso.com/" target="_blank">フリー写真素材ぱくたそ</a>
+          %a{href: "https://www.pakutaso.com/", target:"_blank"}
+            フリー写真素材ぱくたそ
         %small.footer__copyright
           Copyright
           %i.fa.fa-copyright

@@ -16,19 +16,26 @@
   +text-block(1rem 1, #4e4e50 center)
   +media-breakpoint-down(sm)
     position: static
-    +size(6rem)
-
+    +size(7rem)
 
 .next-holiday__title
   +text-block(1rem 1, 400)
+  font-family: 'EB Garamond', serif
   +margin(vertical, .5rem)
   +media-breakpoint-down(sm)
     font-size: .625rem
     +margin(vertical, .25rem)
 
+.next-holiday__title-link
+  +hover-link
+  color: #4e4e50
+  font-size: 1.25rem
+  +media-breakpoint-down(sm)
+    font-size: .75rem
+
 .next-holiday__date
   +text-block(1.5rem 1, 400 .07em)
   +margin(vertical, .5rem)
   +media-breakpoint-down(sm)
-    font-size: 1rem
+    font-size: .875rem
     +margin(vertical, .25rem)
