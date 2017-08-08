@@ -1,0 +1,20 @@
+.footer
+  +text-block(.875rem 1, white flex)
+  align-items: center
+  +media-breakpoint-down(sm)
+    display: block
+    line-height: 1.4
+    font-size: .75rem
+  a
+    +hover-link
+    color: white
+  >*
+    margin-right: .75rem
+    display: block
+    +media-breakpoint-down(sm)
+      margin-right: 0
+    &:last-child
+      margin-right: 0
+
+.footer__title
+  font-weight: 600
