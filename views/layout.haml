@@ -1,11 +1,8 @@
-!!! XML
-!!!
+!!! 5
 %html
   %head
     %title Next Holiday
-    %meta{'http-equiv' => 'Content-Type', 'content' => 'text/html; charset=utf-8'}
-    %meta{'http-equiv' => 'Content-Style-Type', 'content' => 'text/css'}
-    %meta{'http-equiv' => 'Content-Script-Type', 'content' => 'text/javascript'}
+    %meta{'charset': 'utf-8'}
     %meta{ name: 'description', content: '次の祝日を教えてくれるサービス' }
     %meta{ name: 'keywords', content: '祝日,お休み,休日,お出かけ' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
@@ -36,7 +33,7 @@
                 - else
                   %a.next-holiday__title-link{ href: "/" }
                     Next Holiday
-              %time.next-holiday__date
+              %time.next-holiday__date{ datetime: @holiday.date}
                 #{@holiday.date.month}月#{@holiday.date.day}日(#{@holiday.wday_name})
               %nav.next-holiday-nav
                 %ul.next-holiday-nav__items
