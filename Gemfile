@@ -1,18 +1,24 @@
-source "https://rubygems.org"
-ruby "2.4.1"
+# frozen_string_literal: true
 
-gem "haml"
-gem "sass"
-gem "sinatra"
-gem "rack-flash"
-gem "holiday_jp"
-gem "sinatra-asset-pipeline", require: "sinatra/asset_pipeline"
-gem "uglifier"
-gem "oulu"
-gem "sprockets-helpers"
-gem "autoprefixer-rails"
+source 'https://rubygems.org'
+ruby '2.4.1'
+
+gem 'autoprefixer-rails'
+gem 'haml'
+gem 'haml_lint', require: false
+gem 'holiday_jp'
+gem 'oulu'
+gem 'rack-flash'
+gem 'rubocop'
+gem 'sass'
+gem 'sinatra'
+gem 'sinatra-asset-pipeline', require: 'sinatra/asset_pipeline'
+gem 'sprockets-helpers'
+gem 'uglifier'
 
 group :test do
-  gem "shoulda"
-  gem "rack-test"
+  gem 'delorean'
+  gem 'rack-test'
+  gem 'shoulda'
+  gem 'test-unit'
 end

@@ -1,6 +1,8 @@
-require "rubygems"
-require "bundler"
+# frozen_string_literal: true
+
+require 'rubygems'
+require 'bundler'
 Bundler.setup
 require 'sprockets'
-require "./app"
+require './app'
 run Sinatra::Application
