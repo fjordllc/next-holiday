@@ -31,7 +31,6 @@ GEM
     holiday_jp (0.5.1)
     i18n (0.8.6)
     minitest (5.10.3)
-    mustermann (1.0.0)
     oulu (0.13.3)
       rake
       thor (~> 0.19)
@@ -47,6 +46,9 @@ GEM
       rack
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
+    rack-user_agent (0.5.2)
+      rack (>= 1.5)
+      woothee (>= 1.0.0)
     rainbow (2.2.2)
       rake
     rake (11.3.0)
@@ -100,6 +102,7 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.3.0)
+    woothee (1.7.0)
 
 PLATFORMS
   ruby
@@ -113,6 +116,7 @@ DEPENDENCIES
   oulu
   rack-flash
   rack-test
+  rack-user_agent
   rubocop
   sass
   shoulda
