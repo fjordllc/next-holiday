@@ -1,0 +1,7 @@
+ruby:
+  enabled: true
+  config_file: .ruby.yml
+
+haml:
+  enabled: true
+  config_file: .haml-lint.yml
