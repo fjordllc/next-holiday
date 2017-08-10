@@ -9,6 +9,7 @@ gem 'haml_lint', require: false
 gem 'holiday_jp'
 gem 'oulu'
 gem 'rack-flash'
+gem 'rack-user_agent'
 gem 'rubocop'
 gem 'sass'
 gem 'sinatra'

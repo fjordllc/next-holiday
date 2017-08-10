@@ -19,7 +19,7 @@
     %link{ rel: 'manifest', href: '/favicons/manifest.json' }
     %link{ rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', color: '#5bbad5' }
     %meta{ name: 'theme-color', content: '#ffffff' }
-  %body
+  %body{ class: "#{request.from_iphone? && request.browser == 'Safari' ? 'is-mobile-safari' : ''} #{request.from_ipad? && request.browser == 'Safari' ? 'is-tablet-safari' : ''}" }
     .first-background-image.is-image-center{ class: "is-#{@holiday.date.month}" }
     .last-background-image.is-image-center.js-preload#js-background-image{ class: "is-#{@holiday.date.month}" }
     .wrapper

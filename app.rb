@@ -7,11 +7,13 @@ require "holiday_jp"
 require "sprockets"
 require "oulu"
 require "autoprefixer-rails"
+require "rack/user_agent"
 
 configure do
   Oulu.load_paths.each do |path|
     assets.append_path(path)
   end
+  use Rack::UserAgent
 end
 
 assets = Sprockets::Environment.new do |env|
